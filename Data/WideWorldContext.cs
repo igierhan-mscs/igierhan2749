@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
-using igierhan2749ex1a1.Models;
-using igierhan2749ex1a1.Models.StatisticsViewModels;
+using igierhan2749ex1c1.Models;
+using igierhan2749ex1c1.Models.StatisticsViewModels;
 
-namespace igierhan2749ex1a1.Data
+namespace igierhan2749ex1c1.Data
 {
     public class WideWorldContext : DbContext
     {

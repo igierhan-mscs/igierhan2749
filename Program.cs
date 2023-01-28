@@ -9,9 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 using Microsoft.Extensions.DependencyInjection;
-using igierhan2749ex1a1.Data;
+using igierhan2749ex1c1.Data;
 
-namespace igierhan2749ex1a1
+namespace igierhan2749ex1c1
 {
     public class Program
     {

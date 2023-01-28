@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace igierhan2749ex1a1
+namespace igierhan2749ex1c1
 {
     public class PaginatedList<T> : List<T>
     {

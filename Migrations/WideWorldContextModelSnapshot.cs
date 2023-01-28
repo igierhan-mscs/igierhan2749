@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using igierhan2749ex1a1.Data;
+using igierhan2749ex1c1.Data;
 
-namespace igierhan2749ex1a1.Migrations
+namespace igierhan2749ex1c1.Migrations
 {
     [DbContext(typeof(WideWorldContext))]
     partial class WideWorldContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace igierhan2749ex1a1.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Cities", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Cities", b =>
                 {
                     b.Property<int>("CityId")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("Cities", "Application");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Countries", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Countries", b =>
                 {
                     b.Property<int>("CountryId")
                         .ValueGeneratedOnAdd()
@@ -112,7 +112,7 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("Countries", "Application");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.CustomerCategories", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.CustomerCategories", b =>
                 {
                     b.Property<int>("CustomerCategoryId")
                         .ValueGeneratedOnAdd()
@@ -139,7 +139,7 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("CustomerCategories", "Sales");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Customers", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Customers", b =>
                 {
                     b.Property<int>("CustomerId")
                         .ValueGeneratedOnAdd()
@@ -282,7 +282,7 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("Customers", "Sales");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.People", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.People", b =>
                 {
                     b.Property<int>("PersonId")
                         .ValueGeneratedOnAdd()
@@ -363,7 +363,7 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("People", "Application");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.RawSqlReturn", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.RawSqlReturn", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int");
@@ -373,7 +373,7 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("RawSqlReturn");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.StateProvinces", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.StateProvinces", b =>
                 {
                     b.Property<int>("StateProvinceId")
                         .ValueGeneratedOnAdd()
@@ -421,9 +421,9 @@ namespace igierhan2749ex1a1.Migrations
                     b.ToTable("StateProvinces", "Application");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Cities", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Cities", b =>
                 {
-                    b.HasOne("igierhan2749ex1a1.Models.StateProvinces", "StateProvince")
+                    b.HasOne("igierhan2749ex1c1.Models.StateProvinces", "StateProvince")
                         .WithMany("Cities")
                         .HasForeignKey("StateProvinceId")
                         .HasConstraintName("FK_Application_Cities_StateProvinceID_Application_StateProvinces")
@@ -432,36 +432,36 @@ namespace igierhan2749ex1a1.Migrations
                     b.Navigation("StateProvince");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Customers", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Customers", b =>
                 {
-                    b.HasOne("igierhan2749ex1a1.Models.People", "AlternateContactPerson")
+                    b.HasOne("igierhan2749ex1c1.Models.People", "AlternateContactPerson")
                         .WithMany("CustomersAlternateContact")
                         .HasForeignKey("AlternateContactPersonId")
                         .HasConstraintName("FK_AppPeople_SalesCustomers_AlternateContact")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("igierhan2749ex1a1.Models.CustomerCategories", "CustomerCategory")
+                    b.HasOne("igierhan2749ex1c1.Models.CustomerCategories", "CustomerCategory")
                         .WithMany()
                         .HasForeignKey("CustomerCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("igierhan2749ex1a1.Models.Cities", "DeliveryCity")
+                    b.HasOne("igierhan2749ex1c1.Models.Cities", "DeliveryCity")
                         .WithMany("CustomersDelivery")
                         .HasForeignKey("DeliveryCityId")
                         .HasConstraintName("FK_Sales_Cities_Sales_Customers_Delivery")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("igierhan2749ex1a1.Models.Cities", "PostalCity")
+                    b.HasOne("igierhan2749ex1c1.Models.Cities", "PostalCity")
                         .WithMany("CustomersPostal")
                         .HasForeignKey("PostalCityId")
                         .HasConstraintName("FK_Sales_Cities_Sales_Customers")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("igierhan2749ex1a1.Models.People", "PrimaryContactPerson")
+                    b.HasOne("igierhan2749ex1c1.Models.People", "PrimaryContactPerson")
                         .WithMany("CustomersPrimaryContact")
                         .HasForeignKey("PrimaryContactPersonId")
                         .HasConstraintName("FK_AppPeople_SalesCustomers_PrimaryContact")
@@ -479,9 +479,9 @@ namespace igierhan2749ex1a1.Migrations
                     b.Navigation("PrimaryContactPerson");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.StateProvinces", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.StateProvinces", b =>
                 {
-                    b.HasOne("igierhan2749ex1a1.Models.Countries", "Country")
+                    b.HasOne("igierhan2749ex1c1.Models.Countries", "Country")
                         .WithMany("StateProvinces")
                         .HasForeignKey("CountryId")
                         .HasConstraintName("FK_Application_StateProvinces_CountryID_Application_Countries")
@@ -490,26 +490,26 @@ namespace igierhan2749ex1a1.Migrations
                     b.Navigation("Country");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Cities", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Cities", b =>
                 {
                     b.Navigation("CustomersDelivery");
 
                     b.Navigation("CustomersPostal");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.Countries", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.Countries", b =>
                 {
                     b.Navigation("StateProvinces");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.People", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.People", b =>
                 {
                     b.Navigation("CustomersAlternateContact");
 
                     b.Navigation("CustomersPrimaryContact");
                 });
 
-            modelBuilder.Entity("igierhan2749ex1a1.Models.StateProvinces", b =>
+            modelBuilder.Entity("igierhan2749ex1c1.Models.StateProvinces", b =>
                 {
                     b.Navigation("Cities");
                 });

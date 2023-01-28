@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace igierhan2749ex1a1.Models
+namespace igierhan2749ex1c1.Models
 {
     public class CustomerCategories
     {

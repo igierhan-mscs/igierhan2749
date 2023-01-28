@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace igierhan2749ex1a1.Migrations
+namespace igierhan2749ex1c1.Migrations
 {
     public partial class RowVersion : Migration
     {

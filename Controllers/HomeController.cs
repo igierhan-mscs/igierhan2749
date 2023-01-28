@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using igierhan2749ex1a1.Models;
+using igierhan2749ex1c1.Models;
 
-namespace igierhan2749ex1a1.Controllers
+namespace igierhan2749ex1c1.Controllers
 {
     public class HomeController : Controller
     {

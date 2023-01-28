@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace igierhan2749ex1a1.Migrations
+namespace igierhan2749ex1c1.Migrations
 {
     public partial class InitialCreate : Migration
     {

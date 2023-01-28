@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 using System.ComponentModel.DataAnnotations;
 
-namespace igierhan2749ex1a1.Models.StatisticsViewModels
+namespace igierhan2749ex1c1.Models.StatisticsViewModels
 {
     public class SalesTerritoryGroup
     {
